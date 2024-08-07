@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>SafeElimination</title>
+        <link rel="stylesheet" href="styless.css">
+    </head>
+
+    <body>
+        <h1>SafeElimination</h1>
+        <br>
+        <br>
+        <h3>Objective</h3>
+        <div class="Rules">
+            <p>Two players are chosen randomly from the group. 
+            One player will know the status (safe or eliminated) and the other will try to guess it by asking questions.
+            Player B also has the option to steal the card
+            </p>
+        </div>
+        <div id="rules" class="Rules">
+           
+            <h3>How to Play</h3>
+            <ol>
+                <li>Selection of Players: Randomly select two players from the group</li>
+                <li>
+                    Card Assignment:
+                    <ul>
+                        <li>One player (Player A) is shown a card that says either "Safe" or "Eliminated."</li>
+                        <li>The other player (Player B) cannot see the card and has to guess what it says.</li>
+                    </ul>
+                </li>
+                <li>
+                    Guessing and Stealing
+                    <ul>
+                        <li>After the three questions, Player B has two options</li>
+                        <ul>
+                            <li>Make a Guess: Player B guesses if the card says "Safe" or "Eliminated."</li>
+                            <li>Steal the Card: Player B can choose to steal the card and take a look at it. If Player B steals the card:</li>
+                            <ul>
+                                <li>If the card says "Safe," Player B wins</li>
+                                <li>If the card says "Eliminated," Player B loses</li>
+                            </ul>
+                        </ul>
+                    </ul>
+
+                </li>
+                <li>
+                    Winning
+                    <ul>
+                        <li>The game continue until everyone has had a chance to play.</li>
+                        <li>The group can decide on any penalties or fun consequences for incorrect guesses or failed steals to make the game more interesting!</li>
+                    </ul>
+                </li>
+            </ol>
+
+           
+        </div>
+        <div id="countForm">
+            <h3>Enter the player count</h3>
+            <form onsubmit="event.preventDefault(); playersCount();">
+                <input type="number" id="playerCount" class="Input-box" min="2">
+                <button type="submit" class="btn">lets go</button>
+            </form>
+        </div>
+        <div id="playerForm" style="display: none;">
+            <form onsubmit="event.preventDefault(); addPlayer();">
+                <h3>Add Player's Names</h3>
+                <input type="text" id="playerName" class="Input-box">
+                <button type="submit" class="btn">Add players</button>
+            </form>
+        </div>
+
+        <div id="player-List" style="display: none;">
+            <ol class="Rules" id="playerList">
+            </ol>
+            <button onclick="theArena()" style="display: none;" id="Start" class="btn">Start game</button>
+        </div>
+
+        <div id="Arena" style="display: none;">
+            <h1 id="player1">player 1</h1>
+            <h3>VS</h3>
+            <h1 id="player2">player 2</h1>
+
+            <h4>player1 - look the card :: player2 - guess the card</h4>
+            <h4>give the phone to player1</h4>
+            <button onclick="gameStart()" class="btn" id="play">lets Play</button>
+
+        </div>
+
+        <div id="card" style="display: none;">
+            <h1 id="theCard">card</h1>
+        </div>
+
+
+        <script src="index.js" charset="utf-8"></script>
+    </body>
+</html>

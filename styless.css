@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    background-color: #000000;
+  }
+h1,h3,h4{
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 0 #2e0360;    
+
+}
+.Rules{
+    text-align: left;
+    color: rgb(0, 76, 130);
+    text-shadow: 3px 0 rgba(140, 3, 3, 0.521);
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn{
+    color: red;
+    background-color: rgb(0, 0, 0);
+    text-shadow: 3px 0  #2e0360;
+}
+.Input-box{
+    color: red;
+    text-shadow: 3px 0 #2e0360;   
+    background-color: #000000;
+    background:black;
+
+}
